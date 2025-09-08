@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+@theme {
+  /* Colores personalizados */
+  --color-primary: #14334A;
+  --color-secondary: #657FB4;
+  --color-accent-green: #83B983;
+  --color-accent-yellow: #EBC065;
+  --color-text-dark: #030304;
+  --color-text-gray: #5C5C5E;
+  --color-background: #FFFFFF;
+  --color-background-alt: #FCFBF8;
+  --color-button:#F8F4ED;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/Fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-weight: 300 900;
+  font-style: normal;
+}
