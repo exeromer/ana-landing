@@ -5,7 +5,7 @@ const Logo = () => {
     <img
       src={anaLogoSloganUrl}
       alt="Logo de ANA con Slogan"
-      className="h-24 w-auto" 
+      className="h-auto w-auto" 
     />
   );
 };

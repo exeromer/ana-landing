@@ -2,11 +2,18 @@ import React from 'react';
 
 interface ParrafosProps {
   children: React.ReactNode;
-  className?: string;       
+  variant?: 'default' | 'card' | 'footer';
+  className?: string;
 }
-const Parrafos: React.FC<ParrafosProps> = ({ children, className }) => {
-  const baseClasses = 'font-sans text-base text-text-gray text-center max-w-2xl';
 
+const variants = {
+  default: 'font-sans text-base text-text-gray text-center max-w-2xl',
+  card: 'font-sans text-base text-primary text-center',
+  footer: 'font-sans text-sm text-text-gray text-left',
+};
+
+const Parrafos: React.FC<ParrafosProps> = ({ children, variant = 'default', className }) => {
+  const baseClasses = variants[variant];
   const combinedClasses = `${baseClasses} ${className || ''}`;
 
   return (
