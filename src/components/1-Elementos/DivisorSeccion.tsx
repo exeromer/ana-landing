@@ -1,12 +1,20 @@
 import guardaSvgUrl from '../../assets/ANA_guarda.svg';
-const SectionDivider = () => {
+
+const DivisorSeccion = () => {
+  const dividerStyle = {
+    backgroundImage: `url(${guardaSvgUrl})`,
+    backgroundRepeat: 'repeat-x',
+    backgroundPosition: 'center',
+    backgroundSize: 'contain',
+  };
+
   return (
-    <img
-      src={guardaSvgUrl}
-      alt="Separador de secciones de ANA"
-      className="w-full h-auto"
+    <div
+      className="w-full h-16" 
+      style={dividerStyle}
+      role="separator"
     />
   );
 };
 
-export default SectionDivider;
+export default DivisorSeccion;

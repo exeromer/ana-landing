@@ -1,31 +1,39 @@
 import './App.css'
+import Titulos from './components/1-Elementos/Titulos'
+import Parrafos from './components/1-Elementos/Parrafos'
 import Logo from './components/1-Elementos/Logo'
 import Button from './components/1-Elementos/Boton'
 import ImageContainer from './components/1-Elementos/ContenedorImagen'
+import DivisorSeccion from './components/1-Elementos/DivisorSeccion'
+
 
 function App() {
   return (
-    <div className="bg-background min-h-screen flex flex-col justify-center items-center gap-8">
-      <h1 className="text-3xl font-bold text-accent-green p-4 font">
-        Proyecto ANA
-      </h1>
+    <main className="bg-background-alt min-h-screen flex flex-col justify-center items-center gap-8">
 
-      {/* Sección de prueba para el Logo y Botón */}
+      {/* === Sección 1: Contenido Centrado (como un Hero) === */}
+      <section className="min-h-screen flex flex-col justify-center items-center gap-4 p-4">
+        <Titulos>
+          Qué es ANA
+        </Titulos>
+        <Parrafos>
+          ANA es un servicio de acompañamiento que te permitirá, a través de una serie de reportes, tomar mejores decisiones para tu negocio. Iluminamos el camino para que avances con certeza.
+        </Parrafos>
+        <Logo />
+        <Button variant="primary">
+          Agendá <br />una demo
+        </Button>
+      </section>
 
-      <div className="flex flex-col items-center gap-4">
-        <Logo /></div>
-
-      <div className="flex flex-col items-center gap-4">
-        <h2 className="text-xl font-semibold text-secondary">Botones</h2>
-        <div className="flex items-center gap-4">
-          <Button variant="primary">Agendá <br />una demo</Button>
-          <Button variant="outline">Agendá <br />una demo</Button>
-        </div>
-      </div>
+      {/* === Sección 2: Divisor de Ancho Completo === */}
+      <DivisorSeccion />
 
       {/* Sección de prueba para el Contenedor de Imagen */}
 
-      <div className="w-full h-full object-hidden">
+      <section className="flex flex-col justify-center items-center w-full h-full object-hidden">
+        <h2 className="text-2xl font-bold text-primary">
+          Probando el Avatar
+        </h2>
         <ImageContainer>
           <img
             src="/avatars.jpg"
@@ -33,8 +41,22 @@ function App() {
             className="w-full h-full object-cover"
           />
         </ImageContainer>
-      </div>
-    </div>
+      </section>
+
+      <section className="flex flex-col justify-center items-center w-full h-full object-hidden">
+        <h2 className="text-2xl font-bold text-primary">
+          Variante "round"
+        </h2>
+        <ImageContainer variant="round">
+          <img
+            src="/avatars.jpg"
+            alt="Imagen de Prueba Round"
+            className="w-full h-full object-cover"
+          />
+        </ImageContainer>
+      </section>
+
+    </main>
   )
 }
 
