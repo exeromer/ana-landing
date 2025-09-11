@@ -60,15 +60,15 @@ function App() {
         <h2 className="text-2xl font-bold text-primary">Iconos de Redes Sociales</h2>
         <div className="flex items-center gap-4">
           <RedesIcono type="linkedin" href="https://linkedin.com" />
-          <RedesIcono type="instagram" href="https://instagram.com" />
+          <RedesIcono  type="instagram" href="https://instagram.com" />
         </div>
         <h2 className="text-2xl font-bold text-primary">Iconos de Estrellas</h2>
         <div className="flex items-center gap-4 text-accent-yellow">
-          <StarIcono variant="full" />
-          <StarIcono variant="full" />
-          <StarIcono variant="full" />
-          <StarIcono variant="full" />
-          <StarIcono variant="half" />
+          <StarIcono className='animate-jump-in animate-duration-1000 animate-ease-out' variant="full" />
+          <StarIcono className='animate-jump-in  animate-duration-1250 animate-ease-out' variant="full" />
+          <StarIcono className='animate-jump-in  animate-duration-1500 animate-ease-out' variant="full" />
+          <StarIcono className='animate-jump-in  animate-duration-1750 animate-ease-out' variant="full" />
+          <StarIcono className='animate-jump-in animate-duration-2000 animate-ease-out' variant="half" />
         </div>
         <h2 className="text-2xl font-bold text-primary mt-6">Iconos de Check</h2>
         <div className="flex items-center gap-4 text-green-500">
@@ -90,7 +90,7 @@ function App() {
           <img
             src="/avatars.jpg"
             alt="Imagen de Prueba"
-            className="w-full h-full object-cover"
+              className="w-full h-full object-cover animate-fade animate-duration-[750ms] animate-ease-linear"
           />
         </ImageContainer>
       </section>
@@ -103,7 +103,7 @@ function App() {
           <img
             src="/avatars.jpg"
             alt="Imagen de Prueba Round"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover animate-fade  animate-duration-[750ms] animate-ease-linear"
           />
         </ImageContainer>
       </section>

@@ -15,7 +15,7 @@ interface RedesIconoProps {
 }
 
 const RedesIcono: React.FC<RedesIconoProps> = ({ type, href, className }) => {
-    const baseClasses = 'text-primary hover:text-secondary transition-colors w-6 h-6';
+    const baseClasses = 'text-primary hover:text-secondary transition-colors w-6 h-6 transition-transform duration-300 hover:scale-110 hover:opacity-80';
     const combinedClasses = `${baseClasses} ${className || ''}`;
 
   return (
@@ -23,7 +23,7 @@ const RedesIcono: React.FC<RedesIconoProps> = ({ type, href, className }) => {
       <img 
         src={iconUrls[type]} 
         alt={`Icono de ${type}`}
-        className="w-6 h-6"
+        className="w-6 h-6 "
       />
     </a>
   );
