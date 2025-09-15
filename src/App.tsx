@@ -9,9 +9,13 @@ import RedesIcono from './components/1-Elementos/RedesIcono'
 import StarIcono from './components/1-Elementos/StarIcono'
 import CheckIcono from './components/1-Elementos/CheckIcono'
 import Card from './components/1-Elementos/Card'
-
+import { useInView } from './hooks/useInView'
 
 function App() {
+
+  const [avatarSectionRef, isAvatarSectionVisible] = useInView({ threshold: 0.3 });
+  const [roundAvatarSectionRef, isRoundAvatarSectionVisible] = useInView({ threshold: 0.3 });
+
   return (
     <main className="bg-background-alt min-h-screen flex flex-col justify-center items-center gap-8">
 
@@ -52,7 +56,7 @@ function App() {
         </div>
 
         {/* Probando Logo y Botón */}
-        
+
         <Logo />
         <Button variant="primary">
           Agendá <br />una demo
@@ -60,7 +64,7 @@ function App() {
         <h2 className="text-2xl font-bold text-primary">Iconos de Redes Sociales</h2>
         <div className="flex items-center gap-4">
           <RedesIcono type="linkedin" href="https://linkedin.com" />
-          <RedesIcono  type="instagram" href="https://instagram.com" />
+          <RedesIcono type="instagram" href="https://instagram.com" />
         </div>
         <h2 className="text-2xl font-bold text-primary">Iconos de Estrellas</h2>
         <div className="flex items-center gap-4 text-accent-yellow">
@@ -80,34 +84,40 @@ function App() {
       {/* === Sección 2: Divisor de Ancho Completo === */}
       <DivisorSeccion />
 
-      {/* Sección de prueba para el Contenedor de Imagen */}
-
-      <section className="flex flex-col justify-center items-center w-full h-full object-hidden">
-        <h2 className="text-2xl font-bold text-primary">
+      {/* Sección 3a: Contenedor de Imagen */}
+      <section ref={avatarSectionRef} 
+      className={`flex flex-col justify-center items-center py-16 transition-all duration-700 ease-in-out ${isAvatarSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+        <Titulos variant='name'>
           Probando el Avatar
-        </h2>
+        </Titulos>
         <ImageContainer>
           <img
             src="/avatars.jpg"
             alt="Imagen de Prueba"
-              className="w-full h-full object-cover animate-fade animate-duration-[750ms] animate-ease-linear"
+            className="w-full h-full object-cover"
           />
         </ImageContainer>
       </section>
-
-      <section className="flex flex-col justify-center items-center w-full h-full object-hidden">
-        <h2 className="text-2xl font-bold text-primary">
+      
+      {/* === Sección 3b: Variante "round"  === */}
+      <section
+        ref={roundAvatarSectionRef}
+        className={`flex flex-col justify-center items-center py-16 transition-all duration-700 ease-in-out ${
+          isRoundAvatarSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
+        <Titulos variant='name'>
           Variante "round"
-        </h2>
+        </Titulos>
         <ImageContainer variant="round">
           <img
             src="/avatars.jpg"
             alt="Imagen de Prueba Round"
-            className="w-full h-full object-cover animate-fade  animate-duration-[750ms] animate-ease-linear"
+            className="w-full h-full object-cover"
           />
         </ImageContainer>
       </section>
-
 
     </main>
   )
