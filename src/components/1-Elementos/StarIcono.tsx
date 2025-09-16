@@ -21,6 +21,7 @@ const StarIcono: React.FC<StarIconoProps> = ({ variant = 'full', className }) =>
     <img 
       src={starUrls[variant]}
       alt={`Icono de estrella ${variant}`}
+      loading="lazy"
       className={combinedClasses}
     />
   );

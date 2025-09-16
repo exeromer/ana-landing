@@ -7,13 +7,14 @@ interface CheckIconoProps {
 }
 
 const CheckIcono: React.FC<CheckIconoProps> = ({ className }) => {
-    const baseClasses = 'w-6 h-6';
+    const baseClasses = 'w-16 h-16';
     const combinedClasses = `${baseClasses} ${className || ''}`;
 
     return (
         <img
             src={checkCircleUrl}
             alt="Icono de check"
+            loading="lazy"
             className={combinedClasses}
         />
     );

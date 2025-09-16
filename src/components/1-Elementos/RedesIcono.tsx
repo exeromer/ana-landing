@@ -23,6 +23,7 @@ const RedesIcono: React.FC<RedesIconoProps> = ({ type, href, className }) => {
       <img 
         src={iconUrls[type]} 
         alt={`Icono de ${type}`}
+        loading="lazy"
         className="w-6 h-6 "
       />
     </a>
