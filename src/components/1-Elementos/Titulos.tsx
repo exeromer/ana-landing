@@ -2,7 +2,7 @@ import React from 'react';
 
 interface TitulosProps {
   children: React.ReactNode;
-  variant?: 'section' | 'card' | 'name';
+  variant?: 'section' | 'card' | 'name' | 'nameCliente';
   className?: string;
 }
 
@@ -10,6 +10,7 @@ const variants = {
   section: 'font-sans font-bold text-3xl text-primary text-center',
   card: 'font-sans font-bold text-xl text-primary text-center',
   name: 'font-sans font-semibold text-lg text-primary text-center',
+  nameCliente: 'font-sans font-bold text-base text-primary text-center',
 };
 
 const Titulos: React.FC<TitulosProps> = ({ children, variant = 'section', className }) => {

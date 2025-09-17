@@ -14,7 +14,8 @@ import { useInView } from './hooks/useInView'
 import BeneficiosCard from './components/2-Modulos/BeneficiosCard'
 import BeneficiosSection from './components/3-Secciones/BeneficiosSeccion'
 import EquipoCard from './components/2-Modulos/EquipoCard'
-import SeccionEquipo from './components/3-Secciones/SeccionEquipo'
+import SeccionEquipo from './components/3-Secciones/EquipoSeccion'
+import TestimoniosSeccion from './components/3-Secciones/TestimoniosSeccion'
 
 
 function App() {
@@ -50,6 +51,10 @@ function App() {
       <DivisorSeccion />
 
       <SeccionEquipo />
+
+      <DivisorSeccion />
+
+      <TestimoniosSeccion />
 
       <DivisorSeccion />
 

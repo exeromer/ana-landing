@@ -1,14 +1,14 @@
 import React from 'react';
 import arrowSvgUrl from '../../assets/arrow-square-down-svgrepo-com.svg';
 
-interface ArrowIconProps {
+interface FlechaProps {
   className?: string;
 
   onClick?: () => void;
 }
 
 
-const ArrowIcon: React.FC<ArrowIconProps> = ({ className, onClick }) => {
+const FlechaIcono: React.FC<FlechaProps> = ({ className, onClick }) => {
   const baseClasses = 'w-12 h-12 cursor-pointer hover:opacity-80 transition-opacity';
 
   const combinedClasses = `${baseClasses} ${className || ''}`;
@@ -23,4 +23,4 @@ const ArrowIcon: React.FC<ArrowIconProps> = ({ className, onClick }) => {
   );
 };
 
-export default ArrowIcon;
+export default FlechaIcono;
