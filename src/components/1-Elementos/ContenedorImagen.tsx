@@ -7,7 +7,7 @@ interface ImageContainerProps {
 }
 
 const variants = {
-  oval: 'w-32 h-46 rounded-full overflow-hidden flex items-center justify-center bg-gray-200',
+  oval: 'w-40 h-54 rounded-full overflow-hidden flex items-center justify-center bg-gray-200 transition-transform duration-300 ease-in-out hover:scale-120',
   round: 'w-48 h-54 rounded-full overflow-hidden flex items-center justify-center bg-gray-200', 
 };
 

@@ -13,6 +13,8 @@ import FlechaIcono from './components/1-Elementos/FlechaIcono'
 import { useInView } from './hooks/useInView'
 import BeneficiosCard from './components/2-Modulos/BeneficiosCard'
 import BeneficiosSection from './components/3-Secciones/BeneficiosSeccion'
+import EquipoCard from './components/2-Modulos/EquipoCard'
+import SeccionEquipo from './components/3-Secciones/SeccionEquipo'
 
 
 function App() {
@@ -41,10 +43,13 @@ function App() {
 
       <DivisorSeccion />
 
-           
+
       {/* === Sección de prueba para Módulos === */}
       <BeneficiosSection />
 
+      <DivisorSeccion />
+
+      <SeccionEquipo />
 
       <DivisorSeccion />
 

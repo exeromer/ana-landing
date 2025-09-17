@@ -12,7 +12,6 @@ interface BeneficiosCardProps {
 
 const BeneficiosCard: React.FC<BeneficiosCardProps> = ({ titulo, descripcion }) => {
     return (
-        // Contenedor principal 
         <div className="group w-full max-w-sm h-72 md:h-64">
 
             {/* Flipper */}
