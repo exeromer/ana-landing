@@ -11,18 +11,21 @@ const starUrls = {
 interface StarIconoProps {
   variant?: 'full' | 'half';
   className?: string;
+  style?: React.CSSProperties;
+
 }
 
-const StarIcono: React.FC<StarIconoProps> = ({ variant = 'full', className }) => {
-  const baseClasses = 'w-6 h-6'; 
+const StarIcono: React.FC<StarIconoProps> = ({ variant = 'full', className, style }) => {
+  const baseClasses = 'w-6 h-6';
   const combinedClasses = `${baseClasses} ${className || ''}`;
 
   return (
-    <img 
+    <img
       src={starUrls[variant]}
       alt={`Icono de estrella ${variant}`}
       loading="lazy"
       className={combinedClasses}
+      style={style} 
     />
   );
 };
