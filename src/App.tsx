@@ -17,6 +17,7 @@ import EquipoCard from './components/2-Modulos/EquipoCard'
 import SeccionEquipo from './components/3-Secciones/EquipoSeccion'
 import TestimoniosSeccion from './components/3-Secciones/TestimoniosSeccion'
 import FilosofiaSeccion from './components/3-Secciones/FilosofiaSeccion'
+import FooterSeccion from './components/3-Secciones/FooterSeccion'
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
   };
 
   return (
-    <main className="bg-background-alt">
+    <main>
 
       {/* === SECCIÓN 1: HERO === */}
       <section className="min-h-screen flex flex-col justify-center items-center gap-8 p-4 text-center">
@@ -62,6 +63,8 @@ function App() {
       <FilosofiaSeccion />
 
       <DivisorSeccion />
+
+      <FooterSeccion />
 
     </main>
   )

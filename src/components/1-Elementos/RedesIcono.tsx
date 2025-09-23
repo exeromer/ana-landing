@@ -24,7 +24,7 @@ const RedesIcono: React.FC<RedesIconoProps> = ({ type, href, className }) => {
         src={iconUrls[type]} 
         alt={`Icono de ${type}`}
         loading="lazy"
-        className="w-6 h-6 "
+        className="w-18 h-18 "
       />
     </a>
   );

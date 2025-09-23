@@ -20,7 +20,6 @@ const FilosofiaSeccion: React.FC = () => {
             <Titulos variant="section" className="mb-12">
                 Nuestra Filosofía
             </Titulos>
-
             {/*  CONTENEDOR PRINCIPAL  */}
             <div className="
             flex flex-col gap-8
@@ -36,6 +35,7 @@ const FilosofiaSeccion: React.FC = () => {
                         <img src="/avatars.jpg" alt="Luciérnaga ANA" loading="lazy" className="w-full h-full object-cover" />
                     </ImageContainer>
                 </div>
+                
                 {/* Tarjetas  */}
                 <div className="md:col-start-1 md:row-start-1 lg:col-start-2 lg:row-start-1"><FilosofiaCard {...filosofiaData[0]} /></div>
                 <div className="md:col-start-2 md:row-start-1 lg:col-start-3 lg:row-start-1"><FilosofiaCard {...filosofiaData[1]} /></div>
@@ -45,9 +45,8 @@ const FilosofiaSeccion: React.FC = () => {
                 <div className="md:col-start-1 md:row-start-3 lg:col-start-4 lg:row-start-3"><FilosofiaCard {...filosofiaData[5]} /></div>
                 <div className="md:col-start-2 md:row-start-3 lg:col-start-2 lg:row-start-4"><FilosofiaCard {...filosofiaData[6]} /></div>
                 <div className="md:col-start-3 md:row-start-3 lg:col-start-3 lg:row-start-4"><FilosofiaCard {...filosofiaData[7]} /></div>
-
             </div>
-        </section >
+        </section>
     );
 };
 
