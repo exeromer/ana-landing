@@ -18,7 +18,7 @@ const beneficiosData = [
     },
 ];
 
-const BeneficiosSection: React.FC = () => {
+const BeneficiosSeccion: React.FC = () => {
     return (
         <section className="w-full max-w-6xl mx-auto py-16 px-4">
             <Titulos variant="section" className="mb-12">
@@ -40,4 +40,4 @@ const BeneficiosSection: React.FC = () => {
     );
 };
 
-export default BeneficiosSection;
+export default BeneficiosSeccion;

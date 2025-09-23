@@ -1,11 +1,22 @@
-import anaLogoSloganUrl from '../../assets/ANA_marca_horizontal_slogan.svg';
+import React from 'react';
+import anaLogoUrl from '../../assets/ANA_marca_horizontal_slogan.svg';
 
-const Logo = () => {
+interface LogoProps {
+  variant?: 'grande' | 'pequeno';
+}
+
+const variants = {
+  grande: 'h-50 w-auto',
+  pequeno: 'h-20 w-auto', 
+};
+
+const Logo: React.FC<LogoProps> = ({ variant = 'grande' }) => {
   return (
     <img
-      src={anaLogoSloganUrl}
-      alt="Logo de ANA con Slogan"
-      className="h-auto w-auto" 
+      src={anaLogoUrl}
+      alt="Logo de ANA"
+      loading="lazy"
+      className={variants[variant]}
     />
   );
 };

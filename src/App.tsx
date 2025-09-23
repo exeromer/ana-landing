@@ -12,12 +12,15 @@ import Card from './components/1-Elementos/Card'
 import FlechaIcono from './components/1-Elementos/FlechaIcono'
 import { useInView } from './hooks/useInView'
 import BeneficiosCard from './components/2-Modulos/BeneficiosCard'
-import BeneficiosSection from './components/3-Secciones/BeneficiosSeccion'
+import BeneficiosSeccion from './components/3-Secciones/BeneficiosSeccion'
 import EquipoCard from './components/2-Modulos/EquipoCard'
 import SeccionEquipo from './components/3-Secciones/EquipoSeccion'
 import TestimoniosSeccion from './components/3-Secciones/TestimoniosSeccion'
 import FilosofiaSeccion from './components/3-Secciones/FilosofiaSeccion'
 import FooterSeccion from './components/3-Secciones/FooterSeccion'
+import HeaderSeccion from './components/3-Secciones/HeaderSeccion'
+import SeccionQueEsAna from './components/3-Secciones/AnaSeccion'
+
 
 
 function App() {
@@ -31,43 +34,31 @@ function App() {
   };
 
   return (
-    <main>
+    <>
+      <HeaderSeccion />
 
-      {/* === SECCIÓN 1: HERO === */}
-      <section className="min-h-screen flex flex-col justify-center items-center gap-8 p-4 text-center">
-        <Logo />
-        <Button variant="primary">
-          Agendá <br />una demo
-        </Button>
-        <div className="absolute bottom-10">
-          <FlechaIcono onClick={handleArrowClick} />
-        </div>
-      </section>
+      <main className="bg-background">
 
-      <DivisorSeccion />
+        <section id="inicio" className="min-h-screen flex flex-col justify-center items-center text-center relative p-4">
+          <div className="flex flex-col items-center gap-8">
+            <Logo />
+          </div>
+          <a href="#que-es-ana" className="absolute bottom-10 animate-bounce">
+            <FlechaIcono />
+          </a>
+        </section>
 
+        <section id="que-es-ana"><DivisorSeccion /><SeccionQueEsAna /></section>
+        <section id="beneficios"><DivisorSeccion /><BeneficiosSeccion /></section>
+        <section id="equipo"><DivisorSeccion /><SeccionEquipo /></section>
+        <section id="filosofia"><DivisorSeccion /><FilosofiaSeccion /></section>
+        <section id="clientes"><DivisorSeccion /><TestimoniosSeccion /></section>
 
-      {/* === Sección de prueba para Módulos === */}
-      <BeneficiosSection />
-
-      <DivisorSeccion />
-
-      <SeccionEquipo />
-
-      <DivisorSeccion />
-
-      <TestimoniosSeccion />
-
-      <DivisorSeccion />
-
-      <FilosofiaSeccion />
-
-      <DivisorSeccion />
+      </main>
 
       <FooterSeccion />
-
-    </main>
-  )
+    </>
+  );
 }
 
 export default App;
