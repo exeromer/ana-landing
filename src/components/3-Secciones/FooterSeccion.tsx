@@ -22,8 +22,8 @@ const FooterSeccion: React.FC = () => {
                 </div>
                 {/* --- Columna Derecha: Redes Sociales --- */}
                 <div className="flex gap-6">
-                    <RedesIcono type="linkedin" href="#" className="w-12 h-12" />
-                    <RedesIcono type="instagram" href="#" className="w-12 h-12" />
+                    <RedesIcono type="linkedin" href="#" className="w-10 h-10" />
+                    <RedesIcono type="instagram" href="#" className="w-10 h-10" />
                 </div>
 
             </div>
