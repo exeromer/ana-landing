@@ -16,7 +16,7 @@ const HeaderSeccion: React.FC = () => {
     const [menuAbierto, setMenuAbierto] = useState(false);
 
     return (
-        <header className="sticky -top-1 z-50 w-full bg-background/80 backdrop-blur-sm py-1 px-8 shadow-md">
+        <header className="sticky top-0 z-50 w-full bg-blue-100/60 backdrop-blur-sm  px-8 shadow-md">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <Logo variant="pequeno" />
 
@@ -31,7 +31,7 @@ const HeaderSeccion: React.FC = () => {
 
                 <div className="lg:hidden">
                     <button onClick={() => setMenuAbierto(!menuAbierto)}>
-                        <img src={navIconUrl} alt="Menú de navegación" className="w-8 h-8" />
+                        <img src={navIconUrl} alt="Menú de navegación" className="w-5 h-5" />
                     </button>
                 </div>
             </div>

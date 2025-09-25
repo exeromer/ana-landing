@@ -15,20 +15,28 @@ const SeccionQueEsAna: React.FC = () => {
             className={`w-full max-w-7xl mx-auto py-16 px-4 transition-all duration-1000 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
         >
-            {/* Contenedor principal con layout responsivo */}
+            {/* Contenedor principal*/}
             <div className="flex flex-col lg:flex-row items-center gap-12">
 
                 {/* Columna de Texto (izquierda) */}
-                <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-6">
-                    <Titulos variant="section">
+                <div className="flex-1 flex flex-col items-center text-center lg:items-start lg:text-left gap-6 lg:max-w-xl">
+                    <Titulos variant="section" className="text-4xl lg:text-5xl font-bold mx-auto">
                         Qué es ANA
                     </Titulos>
                     <Parrafos>
-                        ANA es un servicio de analítica de datos para negocios que convierte tu información en decisiones rentables. Se conecta fácil a tus sistemas (ERP, CRM, Excel, Google Sheets) y te muestra 10 que realmente impacta en tu negocio. Es un servicio ideal para empresas que buscan claridad, agilidad y resultados con acompañamiento estratégico real.
+                        ANA es un servicio de analítica de datos para negocios que convierte tu información en decisiones rentables.
                     </Parrafos>
-                    <Boton variant="primary">
-                        Agendá <br /> una demo
-                    </Boton>
+                    <Parrafos>
+                        Se conecta fácil a tus sistemas (ERP, CRM, Excel, Google Sheets) y te muestra lo que realmente impacta en tu negocio.
+                    </Parrafos>
+                    <Parrafos>
+                        Es un servicio ideal para empresas que buscan claridad, agilidad y resultados con acompañamiento estratégico real.
+                    </Parrafos>
+                    <div className="w-full flex justify-center">
+                        <Boton variant="primary">
+                            Agendá <br /> una demo
+                        </Boton>
+                    </div>
                 </div>
 
                 {/* Columna de Imagen (derecha) */}

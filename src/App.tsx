@@ -1,8 +1,9 @@
 import './App.css'
+import { useState } from 'react'
 import Titulos from './components/1-Elementos/Titulos'
 import Parrafos from './components/1-Elementos/Parrafos'
 import Logo from './components/1-Elementos/Logo'
-import Button from './components/1-Elementos/Boton'
+import Boton from './components/1-Elementos/Boton'
 import ImageContainer from './components/1-Elementos/ContenedorImagen'
 import DivisorSeccion from './components/1-Elementos/DivisorSeccion'
 import RedesIcono from './components/1-Elementos/RedesIcono'
@@ -32,30 +33,49 @@ function App() {
   const handleArrowClick = () => {
     alert("¡La flecha fue clickeada! Aquí iría la animación de scroll.");
   };
+  const [vistaHero, setVistaHero] = useState(true);
+  const [saliendo, setSaliendo] = useState(false);
 
+  const handleEntrarAlSitio = () => {
+    setSaliendo(true);
+    setTimeout(() => {
+      setVistaHero(false);
+    }, 700);
+  }
+
+  // --- VISTA HERO ---
+  if (vistaHero) {
+    return (
+      <main className={`
+      bg-background min-h-screen flex flex-col justify-center items-center relative 
+      transition-opacity duration-700 ease-in-out
+      ${saliendo ? 'opacity-0' : 'opacity-100'}
+    `}>
+        <div className="flex flex-col items-center gap-8">
+          <Logo variant="grande" />
+          <Parrafos variant="subtitle">Ilumina tus decisiones</Parrafos>
+          <Boton variant="primary">
+            Agendá <br /> una demo
+          </Boton>
+        </div>
+        <div className="absolute bottom-10 animate-bounce">
+          <FlechaIcono onClick={handleEntrarAlSitio} />
+        </div>
+      </main>
+    );
+  }
+
+  // --- VISTA SITIO ---
   return (
     <>
       <HeaderSeccion />
-
-      <main className="bg-background">
-
-        <section id="inicio" className="min-h-screen flex flex-col justify-center items-center text-center relative p-4">
-          <div className="flex flex-col items-center gap-8">
-            <Logo />
-          </div>
-          <a href="#que-es-ana" className="absolute bottom-10 animate-bounce">
-            <FlechaIcono />
-          </a>
-        </section>
-
-        <section id="que-es-ana"><DivisorSeccion /><SeccionQueEsAna /></section>
+      <main className="bg-background animate-fade-in animate-duration-1000">
+        <section id="que-es-ana"><SeccionQueEsAna /></section>
         <section id="beneficios"><DivisorSeccion /><BeneficiosSeccion /></section>
         <section id="equipo"><DivisorSeccion /><SeccionEquipo /></section>
         <section id="filosofia"><DivisorSeccion /><FilosofiaSeccion /></section>
         <section id="clientes"><DivisorSeccion /><TestimoniosSeccion /></section>
-
       </main>
-
       <FooterSeccion />
     </>
   );
