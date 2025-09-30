@@ -25,21 +25,25 @@ const TestimoniosSeccion: React.FC = () => {
   const [ref, isVisible] = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
-  <section
-    ref={ref}
-    className={`w-full max-w-6xl mx-auto py-16 px-4 transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-  >
-    <Titulos variant="section" className="mb-12">
-    Clientes
-    </Titulos>
-    <div className="flex flex-wrap justify-center gap-8">
-    {testimoniosData.map((testimonio) => (
-      <div key={testimonio.nombre} className="w-full md:w-[45%] lg:w-[30%]">
-      <TestimoniosCard {...testimonio} isVisible={isVisible} />
+    <section
+      ref={ref}
+      className={`w-full max-w-6xl mx-auto py-16 px-4 transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+    >
+      <Titulos variant="section" className={`mb-12 ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}>
+        Clientes
+      </Titulos>
+      <div className="flex flex-wrap justify-center gap-8">
+        {testimoniosData.map((testimonio, index) => (
+          <div
+            key={testimonio.nombre}
+            className={`w-full md:w-[45%] lg:w-[30%] flex justify-center ${isVisible ? 'animate-fade-up animate-ease-in-out' : 'opacity-0'}`}
+            style={{ animationDelay: `${index * 300}ms` }} 
+          >
+            <TestimoniosCard {...testimonio} isVisible={isVisible} />
+          </div>
+        ))}
       </div>
-    ))}
-    </div>
-  </section>
+    </section>
   );
 };
 

@@ -10,7 +10,7 @@ const iconUrls = {
 
 interface RedesIconoProps {
     type: 'linkedin' | 'instagram';
-    href: string;
+    href?: string;
     className?: string;
 }
 
@@ -18,16 +18,27 @@ const RedesIcono: React.FC<RedesIconoProps> = ({ type, href, className }) => {
     const baseClasses = 'text-primary hover:text-secondary transition-colors w-6 h-6 transition-transform duration-300 hover:scale-110 hover:opacity-80';
     const combinedClasses = `${baseClasses} ${className || ''}`;
 
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={combinedClasses}>
-      <img 
-        src={iconUrls[type]} 
-        alt={`Icono de ${type}`}
-        loading="lazy"
-        className="w-18 h-18 "
-      />
-    </a>
-  );
+    const imageElement = (
+        <img
+            src={iconUrls[type]}
+            alt={`Icono de ${type}`}
+            loading="lazy"
+            className="w-18 h-18" 
+        />
+    );
+    if (href) {
+        return (
+            <a href={href} target="_blank" rel="noopener noreferrer" className={combinedClasses}>
+                {imageElement}
+            </a>
+        );
+    }
+
+    return (
+        <div className={combinedClasses}>
+            {imageElement}
+        </div>
+    );
 };
 
 export default RedesIcono;

@@ -23,7 +23,7 @@ const FilosofiaSeccion: React.FC = () => {
             </Titulos>
             {/*  CONTENEDOR PRINCIPAL  */}
             <div className="
-            flex flex-col gap-8
+            flex flex-col items-center gap-8
             md:grid md:grid-cols-3 md:grid-rows-3
             lg:grid-cols-4 lg:grid-rows-4">
 
@@ -38,14 +38,14 @@ const FilosofiaSeccion: React.FC = () => {
                 </div>
 
                 {/* Tarjetas  */}
-                <div className="md:col-start-1 md:row-start-1 lg:col-start-2 lg:row-start-1"><FilosofiaCard {...filosofiaData[0]} /></div>
-                <div className="md:col-start-2 md:row-start-1 lg:col-start-3 lg:row-start-1"><FilosofiaCard {...filosofiaData[1]} /></div>
-                <div className="md:col-start-3 md:row-start-1 lg:row-start-2 lg:col-start-1"><FilosofiaCard {...filosofiaData[2]} /></div>
-                <div className="md:col-start-1 md:row-start-2 lg:col-start-4 lg:row-start-2"><FilosofiaCard {...filosofiaData[3]} /></div>
-                <div className="md:col-start-3 md:row-start-2 lg:col-start-1 lg:row-start-3"><FilosofiaCard {...filosofiaData[4]} /></div>
-                <div className="md:col-start-1 md:row-start-3 lg:col-start-4 lg:row-start-3"><FilosofiaCard {...filosofiaData[5]} /></div>
-                <div className="md:col-start-2 md:row-start-3 lg:col-start-2 lg:row-start-4"><FilosofiaCard {...filosofiaData[6]} /></div>
-                <div className="md:col-start-3 md:row-start-3 lg:col-start-3 lg:row-start-4"><FilosofiaCard {...filosofiaData[7]} /></div>
+                <div className="w-full md:w-auto md:col-start-2 md:row-start-1 lg:col-start-3 lg:row-start-1"><FilosofiaCard {...filosofiaData[1]} /></div>
+                <div className="w-full md:w-auto md:col-start-1 md:row-start-1 lg:col-start-2 lg:row-start-1"><FilosofiaCard {...filosofiaData[0]} /></div>
+                <div className="w-full md:w-auto md:col-start-3 md:row-start-1 lg:row-start-2 lg:col-start-1"><FilosofiaCard {...filosofiaData[2]} /></div>
+                <div className="w-full md:w-auto md:col-start-1 md:row-start-2 lg:col-start-4 lg:row-start-2"><FilosofiaCard {...filosofiaData[3]} /></div>
+                <div className="w-full md:w-auto md:col-start-3 md:row-start-2 lg:col-start-1 lg:row-start-3"><FilosofiaCard {...filosofiaData[4]} /></div>
+                <div className="w-full md:w-auto md:col-start-1 md:row-start-3 lg:col-start-4 lg:row-start-3"><FilosofiaCard {...filosofiaData[5]} /></div>
+                <div className="w-full md:w-auto md:col-start-2 md:row-start-3 lg:col-start-2 lg:row-start-4"><FilosofiaCard {...filosofiaData[6]} /></div>
+                <div className="w-full md:w-auto md:col-start-3 md:row-start-3 lg:col-start-3 lg:row-start-4"><FilosofiaCard {...filosofiaData[7]} /></div>
             </div>
         </section>
     );

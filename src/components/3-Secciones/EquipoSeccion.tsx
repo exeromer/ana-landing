@@ -34,13 +34,15 @@ const SeccionEquipo: React.FC = () => {
             </Titulos>
 
             <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-12">
-                {equipoData.map((miembro) => (
+                {equipoData.map((miembro,index) => (
                     <EquipoCard
                         key={miembro.nombre}
                         imagenSrc={miembro.imagenSrc}
                         nombre={miembro.nombre}
                         puesto={miembro.puesto}
                         linkedinUrl={miembro.linkedinUrl}
+                        isVisible={isVisible}
+                        animationDelay={`${index * 500}ms`} 
                     />
                 ))}
             </div>

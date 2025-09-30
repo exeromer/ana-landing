@@ -21,19 +21,20 @@ const SeccionQueEsAna: React.FC = () => {
 
                     {/* Columna de Texto (izquierda) */}
                     <div className="flex-1 flex flex-col items-center text-center lg:items-start lg:text-left gap-6 lg:max-w-xl">
-                        <Titulos variant="section" className="text-4xl lg:text-5xl font-bold mx-auto">
+                        <Titulos variant="section" className={`text-xl lg:text-5xl font-bold mx-auto ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}>
                             Qué es ANA
                         </Titulos>
-                        <Parrafos>
+                        <Parrafos className={isVisible ? 'animate-fade-up animate-delay-200' : 'opacity-0'}>
                             ANA es un servicio de analítica de datos para negocios que convierte tu información en decisiones rentables.
                         </Parrafos>
-                        <Parrafos>
+                        <Parrafos className={isVisible ? 'animate-fade-up animate-delay-400' : 'opacity-0'}>
                             Se conecta fácil a tus sistemas (ERP, CRM, Excel, Google Sheets) y te muestra lo que realmente impacta en tu negocio.
                         </Parrafos>
-                        <Parrafos>
+                        <Parrafos className={isVisible ? 'animate-fade-up animate-delay-600' : 'opacity-0'}>
                             Es un servicio ideal para empresas que buscan claridad, agilidad y resultados con acompañamiento estratégico real.
                         </Parrafos>
-                        <div className="w-full flex justify-center">
+
+                        <div className={`w-full flex justify-center ${isVisible ? 'animate-fade-up animate-delay-700' : 'opacity-0'}`}>
                             <Boton variant="primary">
                                 Agendá <br /> una demo
                             </Boton>
@@ -53,7 +54,7 @@ const SeccionQueEsAna: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

@@ -3,24 +3,21 @@ import React from 'react';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  variant?: 'default' | 'cut-corners'; 
 }
 
-const Card: React.FC<CardProps> = ({ children, className, variant = 'default' }) => {
-  const baseClasses = 'bg-accent-yellow p-6 shadow-md';
+const Card = React.forwardRef<HTMLDivElement, CardProps>(({ children, className }, ref) => {
+  const baseClasses = 'relative overflow-hidden bg-accent-yellow p-6 shadow-lg shadow-gray-400 rounded-2xl';
+  const haloClasses = 'ring-2 ring-accent-yellow/50 ring-offset-4 ring-offset-background';
 
-  const variantClasses = {
-    default: 'rounded-2xl',
-    'cut-corners': '[clip-path:polygon(20px_0,100%_0,100%_100%,0_100%,0_20px)]',
-  };
+  const combinedClasses = `${baseClasses} ${haloClasses} ${className || ''}`;
 
-  const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${className || ''}`;
 
-  return (
-    <div className={combinedClasses}>
-      {children}
-    </div>
-  );
-};
+    return (
+      <div className={combinedClasses} ref={ref}> 
+        {children}
+      </div>
+    );
+  }
+);
 
 export default Card;

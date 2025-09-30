@@ -26,7 +26,7 @@ const BeneficiosCard: React.FC<BeneficiosCardProps> = ({ titulo, descripcion }) 
 
                 {/*CARA FRONTAL */}
                 <div className="absolute w-full h-full [backface-visibility:hidden]">
-                    <Card variant='cut-corners' className="relative w-full h-full flex flex-col justify-center items-center text-center gap-4">
+                    <Card className="relative w-full h-full flex flex-col justify-center items-center text-center gap-4">
                         <div className="absolute inset-x-0 top-0 flex justify-center mt-2">
                             <div>
                                 <CheckIcono className="text-white w-8 h-8" />
@@ -40,7 +40,7 @@ const BeneficiosCard: React.FC<BeneficiosCardProps> = ({ titulo, descripcion }) 
 
                 {/* CARA TRASERA */}
                 <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                    <Card variant="cut-corners" className="w-full h-full flex flex-col justify-center items-center text-center p-6">
+                    <Card className="w-full h-full flex flex-col justify-center items-center text-center p-6">
                         {isFlipped && (
                             <TextoAnimado
                                 texto={descripcion}

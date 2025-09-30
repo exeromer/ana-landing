@@ -17,7 +17,7 @@ const FilosofiaCard: React.FC<FilosofiaCardProps> = ({ palabra, frase }) => {
 
   return (
     <div
-      className="group w-full max-w-sm h-72 md:h-64"
+      className="group w-full max-w-sm h-72 md:h-64 mx-auto"
       // Estado para saber donde esta mouse
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
@@ -35,7 +35,7 @@ const FilosofiaCard: React.FC<FilosofiaCardProps> = ({ palabra, frase }) => {
           {/* CARA FRONTAL */}
           <div className="absolute w-full h-full [backface-visibility:hidden]">
             <Card className="w-full h-full flex flex-col justify-center items-center text-center gap-2">
-              <img src={selloForbitUrl} alt="Sello ANA Forbit" className="w-12 h-12" />
+              <img src={selloForbitUrl} alt="Sello ANA Forbit" className="w-14 h-14" />
               <Titulos variant="card">{palabra}</Titulos>
             </Card>
           </div>

@@ -38,7 +38,7 @@ const HeaderSeccion: React.FC = () => {
 
             {/* --- Menú Desplegable Celu --- */}
             {menuAbierto && (
-                <nav className="lg:hidden mt-4 flex flex-col items-center gap-4 bg-background py-4">
+                <nav className="lg:hidden mt-4 flex flex-col items-center gap-4 bg-blue-60 py-4">
                     {navLinks.map((link) => (
                         <a key={link.name} href={link.href} onClick={() => setMenuAbierto(false)} className="text-base font-bold text-primary hover:text-secondary transition-colors">
                             {link.name}

@@ -31,7 +31,7 @@ const BeneficiosSeccion: React.FC = () => {
                 {/* grilla responsiva */}
                 <div className="flex flex-wrap justify-center gap-8">
                     {beneficiosData.map((beneficio, index) => (
-                        <div key={index} className="w-full md:w-[45%] lg:w-[30%]">
+                        <div key={index} className="w-full md:w-[45%] lg:w-[30%] flex justify-center">
                             <BeneficiosCard
                                 key={index}
                                 titulo={beneficio.titulo}

@@ -16,7 +16,7 @@ interface StarIconoProps {
 }
 
 const StarIcono: React.FC<StarIconoProps> = ({ variant = 'full', className, style }) => {
-  const baseClasses = 'w-6 h-6';
+  const baseClasses = 'w-10 h-10';
   const combinedClasses = `${baseClasses} ${className || ''}`;
 
   return (
