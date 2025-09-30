@@ -7,7 +7,7 @@ interface TitulosProps {
 }
 
 const variants = {
-  section: 'font-sans font-bold text-3xl text-primary text-center',
+  section: 'font-sans font-bold text-5xl text-primary text-center',
   card: 'font-sans font-bold text-xl text-primary text-center',
   name: 'font-sans font-semibold text-lg text-primary text-center',
   nameCliente: 'font-sans font-bold text-base text-primary text-center',

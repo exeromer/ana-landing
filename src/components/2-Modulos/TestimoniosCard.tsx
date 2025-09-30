@@ -9,9 +9,10 @@ interface TestimoniosCardProps {
     nombre: string;
     testimonio: string;
     calificacion: number;
+    isVisible?: boolean;
 }
 
-const renderEstrellas = (rating: number) => {
+const renderEstrellas = (rating: number, isVisible: boolean) => {
     const estrellas = [];
     const estrellasCompletas = Math.floor(rating);
     const tieneMediaEstrella = rating % 1 !== 0;
@@ -21,7 +22,7 @@ const renderEstrellas = (rating: number) => {
             <StarIcono
                 key={`full-${i}`}
                 variant="full"
-                className={`animate-fade-down animate-ease-in`}
+                className={isVisible ? `animate-fade-down animate-ease-in` : 'opacity-0'}
                 style={{ animationDelay: `${i * 150}ms` }}
             />
         );
@@ -31,7 +32,7 @@ const renderEstrellas = (rating: number) => {
             <StarIcono
                 key="half"
                 variant="half"
-                className="animate-fade-down animate-ease-in"
+                className={isVisible ? "animate-fade-down animate-ease-in" : 'opacity-0'}
                 style={{ animationDelay: `${estrellasCompletas * 250}ms` }}
             />
         );
@@ -43,11 +44,12 @@ const TestimoniosCard: React.FC<TestimoniosCardProps> = ({
     nombre,
     testimonio,
     calificacion,
+    isVisible = false,
 }) => {
     return (
         <Card className="w-full max-w-sm h-86 flex flex-col items-center justify-between text-center gap-4 p-6">
             <div className="flex gap-2">
-                {renderEstrellas(calificacion)}
+                {renderEstrellas(calificacion, isVisible)}
             </div>
             <div className="overflow-hidden">
                 <Parrafos variant="card" className="line-clamp-7">

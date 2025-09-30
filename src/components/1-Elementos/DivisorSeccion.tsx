@@ -1,16 +1,24 @@
 import guardaSvgUrl from '../../assets/ANA_guarda.svg';
 
-const DivisorSeccion = () => {
+interface DivisorProps {
+  colorDesde: string;
+  colorHasta: string;
+}
+const DivisorSeccion: React.FC<DivisorProps> = ({ colorDesde, colorHasta }) => {
   const dividerStyle = {
-    backgroundImage: `url(${guardaSvgUrl})`,
-    backgroundRepeat: 'repeat-x',
-    backgroundPosition: 'center',
-    backgroundSize: 'contain',
+    backgroundImage: `
+      linear-gradient(to bottom, ${colorDesde}, ${colorHasta}),
+      url(${guardaSvgUrl})
+    `,
+    backgroundRepeat: 'no-repeat, repeat-x',
+    backgroundPosition: 'center, center',
+    backgroundSize: '100% 100%, contain',
+    backgroundBlendMode: 'multiply',
   };
 
   return (
     <div
-      className="w-full h-16" 
+      className="w-full h-16"
       style={dividerStyle}
       role="separator"
     />

@@ -15,6 +15,7 @@ const filosofiaData = [
 ];
 
 const FilosofiaSeccion: React.FC = () => {
+
     return (
         <section className="w-full max-w-7xl mx-auto py-16 px-4">
             <Titulos variant="section" className="mb-12">
@@ -32,10 +33,10 @@ const FilosofiaSeccion: React.FC = () => {
                     lg:col-span-2 lg:row-span-2 lg:col-start-2 lg:row-start-2 
                     lg:justify-self-center">
                     <ImageContainer variant="round" className="h-full w-full">
-                        <img src="/avatars.jpg" alt="Luciérnaga ANA" loading="lazy" className="w-full h-full object-cover" />
+                        <img src="/luciernaga_rede.png" alt="Luciérnaga ANA" loading="lazy" className="w-full h-full object-cover" />
                     </ImageContainer>
                 </div>
-                
+
                 {/* Tarjetas  */}
                 <div className="md:col-start-1 md:row-start-1 lg:col-start-2 lg:row-start-1"><FilosofiaCard {...filosofiaData[0]} /></div>
                 <div className="md:col-start-2 md:row-start-1 lg:col-start-3 lg:row-start-1"><FilosofiaCard {...filosofiaData[1]} /></div>

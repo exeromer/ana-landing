@@ -1,6 +1,7 @@
 import React from "react";
 import Titulos from '../1-Elementos/Titulos';
 import EquipoCard from '../2-Modulos/EquipoCard';
+import { useInView } from '../../hooks/useInView';
 
 const equipoData = [
     {
@@ -24,10 +25,12 @@ const equipoData = [
 ];
 
 const SeccionEquipo: React.FC = () => {
+    const [ref, isVisible] = useInView({ threshold: 0.2, triggerOnce: true });
+
     return (
-        <section className="w-full max-w-6xl mx-auto py-16 px-4">
+        <section ref={ref} className="w-full max-w-6xl mx-auto py-16 px-4">
             <Titulos variant="section" className="mb-12">
-                Equipo
+                EQUIPO
             </Titulos>
 
             <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-12">

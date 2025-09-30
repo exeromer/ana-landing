@@ -9,7 +9,7 @@ interface FlechaProps {
 
 
 const FlechaIcono: React.FC<FlechaProps> = ({ className, onClick }) => {
-  const baseClasses = 'w-12 h-12 cursor-pointer hover:opacity-80 transition-opacity';
+  const baseClasses = 'w-18 h-18 cursor-pointer hover:opacity-80 transition-opacity';
 
   const combinedClasses = `${baseClasses} ${className || ''}`;
 

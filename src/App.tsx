@@ -21,22 +21,19 @@ import FilosofiaSeccion from './components/3-Secciones/FilosofiaSeccion'
 import FooterSeccion from './components/3-Secciones/FooterSeccion'
 import HeaderSeccion from './components/3-Secciones/HeaderSeccion'
 import SeccionQueEsAna from './components/3-Secciones/AnaSeccion'
+import TextoAnimado from './components/1-Elementos/TextoAnimado'
 
 
 
 function App() {
 
-  const [avatarSectionRef, isAvatarSectionVisible] = useInView({ threshold: 0.3 });
-  const [roundAvatarSectionRef, isRoundAvatarSectionVisible] = useInView({ threshold: 0.3 });
-
-  //Funcion prueba para el scroll hacia abajo
-  const handleArrowClick = () => {
-    alert("¡La flecha fue clickeada! Aquí iría la animación de scroll.");
-  };
   const [vistaHero, setVistaHero] = useState(true);
   const [saliendo, setSaliendo] = useState(false);
+  const [pingActivado, setPingActivado] = useState(false);
+
 
   const handleEntrarAlSitio = () => {
+    setPingActivado(true);
     setSaliendo(true);
     setTimeout(() => {
       setVistaHero(false);
@@ -47,19 +44,22 @@ function App() {
   if (vistaHero) {
     return (
       <main className={`
-      bg-background min-h-screen flex flex-col justify-center items-center relative 
+      bg-background-alt min-h-screen flex flex-col justify-center items-center relative 
       transition-opacity duration-700 ease-in-out
       ${saliendo ? 'opacity-0' : 'opacity-100'}
     `}>
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-8" onClick={handleEntrarAlSitio}>
           <Logo variant="grande" />
-          <Parrafos variant="subtitle">Ilumina tus decisiones</Parrafos>
-          <Boton variant="primary">
-            Agendá <br /> una demo
+          
+          <Boton variant="primary" >
+          <TextoAnimado
+            texto="AGENDA UNA DEMO"
+            className="font-sans text-xl font-bold text-center"
+          />
           </Boton>
         </div>
-        <div className="absolute bottom-10 animate-bounce">
-          <FlechaIcono onClick={handleEntrarAlSitio} />
+        <div className="absolute bottom-10 animate-bounce h-40 w-40 flex flex-col items-center justify-center gap-2 cursor-pointer">
+          <FlechaIcono onClick={handleEntrarAlSitio} className={pingActivado ? 'animate-ping animate-once animate-duration-1000 animate-ease-in' : 'animate-bounce'} />
         </div>
       </main>
     );
@@ -69,12 +69,24 @@ function App() {
   return (
     <>
       <HeaderSeccion />
-      <main className="bg-background animate-fade-in animate-duration-1000">
+      <main className="animate-fade-in animate-duration-1000">
         <section id="que-es-ana"><SeccionQueEsAna /></section>
-        <section id="beneficios"><DivisorSeccion /><BeneficiosSeccion /></section>
-        <section id="equipo"><DivisorSeccion /><SeccionEquipo /></section>
-        <section id="filosofia"><DivisorSeccion /><FilosofiaSeccion /></section>
-        <section id="clientes"><DivisorSeccion /><TestimoniosSeccion /></section>
+        <section id="beneficios">
+          <DivisorSeccion colorDesde="var(--color-background-ana)" colorHasta="var(--color-background-beneficios)" />
+          <BeneficiosSeccion />
+        </section>
+        <section id="equipo">
+          <DivisorSeccion colorDesde="var(--color-background-beneficios)" colorHasta="var(--color-background)" />
+          <SeccionEquipo />
+        </section>
+        <section id="filosofia">
+          <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
+          <FilosofiaSeccion />
+        </section>
+        <section id="clientes">
+          <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
+          <TestimoniosSeccion />
+        </section>
       </main>
       <FooterSeccion />
     </>

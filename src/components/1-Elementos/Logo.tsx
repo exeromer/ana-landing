@@ -6,7 +6,7 @@ interface LogoProps {
 }
 
 const variants = {
-  grande: 'h-50 w-auto',
+  grande: 'h-80 w-auto',
   pequeno: 'h-20 w-auto', 
 };
 

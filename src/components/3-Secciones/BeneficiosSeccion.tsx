@@ -2,6 +2,7 @@ import React from 'react';
 
 import Titulos from '../1-Elementos/Titulos';
 import BeneficiosCard from '../2-Modulos/BeneficiosCard';
+import { useInView } from '../../hooks/useInView';
 
 const beneficiosData = [
     {
@@ -19,22 +20,26 @@ const beneficiosData = [
 ];
 
 const BeneficiosSeccion: React.FC = () => {
+    const [ref, isVisible] = useInView({ threshold: 0.2, triggerOnce: true });
+
     return (
-        <section className="w-full max-w-6xl mx-auto py-16 px-4">
-            <Titulos variant="section" className="mb-12">
-                Beneficios de ANA
-            </Titulos>
-            {/* grilla responsiva */}
-            <div className="flex flex-wrap justify-center gap-8">
-                {beneficiosData.map((beneficio, index) => (
-                    <div key={index} className="w-full md:w-[45%] lg:w-[30%]">
-                        <BeneficiosCard
-                            key={index}
-                            titulo={beneficio.titulo}
-                            descripcion={beneficio.descripcion}
-                        />
-                    </div>
-                ))}
+        <section ref = {ref} className="w-full bg-background-beneficios py-16 px-4">
+            <div className="w-full max-w-6xl mx-auto">
+                <Titulos variant="section" className="mb-12">
+                    Beneficios de ANA
+                </Titulos>
+                {/* grilla responsiva */}
+                <div className="flex flex-wrap justify-center gap-8">
+                    {beneficiosData.map((beneficio, index) => (
+                        <div key={index} className="w-full md:w-[45%] lg:w-[30%]">
+                            <BeneficiosCard
+                                key={index}
+                                titulo={beneficio.titulo}
+                                descripcion={beneficio.descripcion}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );
