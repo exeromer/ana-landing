@@ -23,17 +23,28 @@ const BeneficiosSeccion: React.FC = () => {
     const [ref, isVisible] = useInView({ threshold: 0.2, triggerOnce: true });
 
     return (
-        <section ref = {ref} className="w-full bg-background-beneficios py-16 px-4">
+        <section ref={ref} className="w-full bg-background-beneficios py-16 px-4">
             <div className="w-full max-w-6xl mx-auto">
-                <Titulos variant="section" className="mb-12">
+                {/* Animación para el título */}
+                <Titulos
+                    variant="section"
+                    className={`mb-12 ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}
+                >
                     Beneficios de ANA
                 </Titulos>
-                {/* grilla responsiva */}
+
                 <div className="flex flex-wrap justify-center gap-8">
                     {beneficiosData.map((beneficio, index) => (
-                        <div key={index} className="w-full md:w-[45%] lg:w-[30%] flex justify-center">
+                        <div
+                            key={index}
+                            className={`
+                                w-full md:w-[45%] lg:w-[30%] flex justify-center
+                                transition-all duration-500
+                                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+                            `}
+                            style={{ transitionDelay: `${index * 200}ms` }}
+                        >
                             <BeneficiosCard
-                                key={index}
                                 titulo={beneficio.titulo}
                                 descripcion={beneficio.descripcion}
                             />

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
 import Card from '../1-Elementos/Card';
-import Parrafos from '../1-Elementos/Parrafos';
 import CheckIcono from '../1-Elementos/CheckIcono';
 import Titulos from '../1-Elementos/Titulos';
 import TextoAnimado from '../1-Elementos/TextoAnimado';
@@ -14,17 +12,17 @@ interface BeneficiosCardProps {
 const BeneficiosCard: React.FC<BeneficiosCardProps> = ({ titulo, descripcion }) => {
     const [isFlipped, setIsFlipped] = useState(false);
 
-    return (
+     return (
         <div
-            className="group w-full max-w-sm h-72 md:h-64"
-            // Estado para saber donde esta mouse
+         className="group w-full max-w-sm h-72 md:h-64 cursor-pointer"
             onMouseEnter={() => setIsFlipped(true)}
             onMouseLeave={() => setIsFlipped(false)}
         >
-            {/* Flipper */}
-            <div className="relative w-full h-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:rotate-y-180">
+            <div
+                className="relative w-full h-full transition-transform duration-700 ease-in-out [transform-style:preserve-3d] group-hover:rotate-y-180 group-hover:scale-105"
+            >
 
-                {/*CARA FRONTAL */}
+                {/* CARA FRONTAL*/}
                 <div className="absolute w-full h-full [backface-visibility:hidden]">
                     <Card className="relative w-full h-full flex flex-col justify-center items-center text-center gap-4">
                         <div className="absolute inset-x-0 top-0 flex justify-center mt-2">
