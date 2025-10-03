@@ -10,7 +10,6 @@ interface FilosofiaCardProps {
   palabra: string;
   frase: string;
 }
-
 const FilosofiaCard: React.FC<FilosofiaCardProps> = ({ palabra, frase }) => {
   const [ref, isVisible] = useInView({ threshold: 0.3, triggerOnce: true });
   const [isFlipped, setIsFlipped] = useState(false);
@@ -34,7 +33,7 @@ const FilosofiaCard: React.FC<FilosofiaCardProps> = ({ palabra, frase }) => {
 
           {/* CARA FRONTAL */}
           <div className="absolute w-full h-full [backface-visibility:hidden]">
-            <Card className="w-full h-full flex flex-col justify-center items-center text-center gap-2">
+            <Card variant="round" className="w-full h-full flex flex-col justify-center items-center text-center gap-2">
               <img src={selloForbitUrl} alt="Sello ANA Forbit" className="w-14 h-14" />
               <Titulos variant="card">{palabra}</Titulos>
             </Card>

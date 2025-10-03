@@ -4,14 +4,14 @@ import ImageContainer from "../1-Elementos/ContenedorImagen";
 import FilosofiaCard from "../2-Modulos/FilosofiaCard";
 
 const filosofiaData = [
-    { palabra: "Claridad", frase: "Claridad que guía." },
-    { palabra: "Simpleza", frase: "Convertimos datos en informacion simple y util, incluso en contextos inciertos." },
-    { palabra: "Agilidad", frase: "Entregamos valor desde el primer mes, priorizando lo que hoy necesita tu negocio." },
-    { palabra: "Propósito", frase: "Tecnología con propósito." },
+    { palabra: "Claridad", frase: "Claridad para entender." },
+    { palabra: "Simpleza", frase: "Simplicidad para avanzar" },
+    { palabra: "Valor", frase: "Valor que se mide en resultados." },
+    { palabra: "Propósito", frase: "Con Propósito y Decisión." },
     { palabra: "Foco", frase: "No vendemos dashboards, generamos decisiones con sentido." },
     { palabra: "Acompañamiento", frase: "Acompañamos cada paso, entendiendo la realidad de cada cliente." },
-    { palabra: "Adaptabilidad", frase: "Nos ajustamos a tus prioridades, herramientas y tiempos." },
-    { palabra: "Cercania", frase: "Adaptabilidad y cercania constante." },
+    { palabra: "Adaptabilidad", frase: "Adaptándonos con Agilidad y Flexibilidad a las necesidades reales de tu negocio." },
+    { palabra: "Cercania", frase: "Trabajamos con Cercanía y Empatía." },
 ];
 
 const FilosofiaSeccion: React.FC = () => {

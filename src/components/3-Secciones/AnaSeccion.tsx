@@ -43,7 +43,7 @@ const SeccionQueEsAna: React.FC = () => {
 
                     {/* Columna de Imagen (derecha) */}
                     <div className="flex-1">
-                        <ContenedorImagen variant="round" className="w-[300px] h-[400px] justify-self-center">
+                        <ContenedorImagen variant="round" className="w-[400px] h-[500px] justify-self-center">
                             <img
                                 src="/luciernaga_pantalla.png"
                                 alt="Logo Ana Secundario"
