@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Logo from '../1-Elementos/Logo';
 import Boton from '../1-Elementos/Boton';
@@ -11,12 +11,31 @@ const navLinks = [
     { name: 'Filosofía', href: '#filosofia' },
     { name: 'Clientes', href: '#clientes' },
 ];
-const HeaderSeccion: React.FC = () => {
+
+interface HeaderSeccionProps {
+    isVisible: boolean;
+}
+
+const HeaderSeccion: React.FC<HeaderSeccionProps> = ({ isVisible }) => {
     // Estado para manejar el menú en celu
     const [menuAbierto, setMenuAbierto] = useState(false);
+    const [hasBackground, setHasBackground] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setHasBackground(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-blue-100/60 backdrop-blur-sm  px-8 shadow-md">
+        <header className={`
+            sticky top-0 z-50 w-full px-8
+            transition-all duration-500 ease-in-out
+            ${isVisible ? 'opacity-100' : 'opacity-0 -translate-y-full'}
+            ${hasBackground ? 'bg-blue-100/80 backdrop-blur-sm shadow-md' : 'bg-transparent'}
+        `}>
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <Logo variant="pequeno" />
 
@@ -28,7 +47,6 @@ const HeaderSeccion: React.FC = () => {
                         </a>
                     ))}
                 </nav>
-
                 <div className="lg:hidden">
                     <button onClick={() => setMenuAbierto(!menuAbierto)}>
                         <img src={navIconUrl} alt="Menú de navegación" className="w-5 h-5" />

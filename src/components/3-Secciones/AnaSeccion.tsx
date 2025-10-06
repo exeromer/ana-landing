@@ -11,6 +11,7 @@ const SeccionQueEsAna: React.FC = () => {
 
     return (
         <section
+            id="que-es-ana"
             ref={ref}
             className="w-full bg-background-ana py-16"
         >
