@@ -1,26 +1,19 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import Logo from './components/1-Elementos/Logo';
-import Boton from './components/1-Elementos/Boton';
 import DivisorSeccion from './components/1-Elementos/DivisorSeccion';
-import FlechaIcono from './components/1-Elementos/FlechaIcono';
 import BeneficiosSeccion from './components/3-Secciones/BeneficiosSeccion';
-import SeccionEquipo from './components/3-Secciones/EquipoSeccion';
+import SeccionEquipo from './components/3-Secciones/ContactoSeccion';
 import TestimoniosSeccion from './components/3-Secciones/TestimoniosSeccion';
 import FilosofiaSeccion from './components/3-Secciones/FilosofiaSeccion';
 import FooterSeccion from './components/3-Secciones/FooterSeccion';
 import HeaderSeccion from './components/3-Secciones/HeaderSeccion';
 import SeccionQueEsAna from './components/3-Secciones/AnaSeccion';
-import TextoAnimado from './components/1-Elementos/TextoAnimado';
 import HeroSeccion from './components/3-Secciones/HeroSeccion';
 
 
 function App() {
-
-  const [vistaHero, setVistaHero] = useState(true);
-  const [saliendo, setSaliendo] = useState(false);
-  const [pingActivado, setPingActivado] = useState(false);
-  const [hasScrolledPastHero, setHasScrolledPastHero] = useState(false);
+ 
+ const [hasScrolledPastHero, setHasScrolledPastHero] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,17 +47,17 @@ function App() {
           <DivisorSeccion colorDesde="var(--color-background-ana)" colorHasta="var(--color-background-beneficios)" />
           <BeneficiosSeccion />
         </section>
-        <section id="equipo">
-          <DivisorSeccion colorDesde="var(--color-background-beneficios)" colorHasta="var(--color-background)" />
-          <SeccionEquipo />
-        </section>
         <section id="filosofia">
-          <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
+          <DivisorSeccion colorDesde="var(--color-background-beneficios)" colorHasta="var(--color-background)" />
           <FilosofiaSeccion />
         </section>
         <section id="clientes">
           <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
           <TestimoniosSeccion />
+        </section>
+        <section id="equipo">
+          <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
+          <SeccionEquipo />
         </section>
       </main>
 
@@ -88,7 +81,7 @@ function App() {
       <main className={`
       bg-background-alt min-h-screen flex flex-col justify-center items-center relative 
       transition-opacity duration-700 ease-in-out
-      animated-gradient 
+      animated-gradient
       ${saliendo ? 'opacity-0' : 'opacity-100'}
     `}>
         <div className="flex flex-col items-center gap-8" onClick={handleEntrarAlSitio}>

@@ -22,7 +22,7 @@ const SeccionQueEsAna: React.FC = () => {
 
                     {/* Columna de Texto (izquierda) */}
                     <div className="flex-1 flex flex-col items-center text-center lg:items-start lg:text-left gap-6 lg:max-w-xl">
-                        <Titulos variant="section" className={`text-xl lg:text-5xl font-bold mx-auto ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}>
+                        <Titulos variant="section" className={`font-bold mx-auto ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}>
                             Qué es ANA
                         </Titulos>
                         <Parrafos className={isVisible ? 'animate-fade-up animate-delay-200' : 'opacity-0'}>

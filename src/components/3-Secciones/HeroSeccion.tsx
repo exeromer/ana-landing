@@ -10,16 +10,6 @@ interface HeroSeccionProps {
 }
 
 const HeroSeccion: React.FC<HeroSeccionProps> = ({ isVisible,onArrowClick }) => {
-  // Función para el scroll suave
-  const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault(); 
-    const targetId = e.currentTarget.getAttribute('href')?.substring(1);
-    if (targetId) {
-      const targetElement = document.getElementById(targetId);
-      targetElement?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section
       id="hero"
@@ -28,6 +18,7 @@ const HeroSeccion: React.FC<HeroSeccionProps> = ({ isVisible,onArrowClick }) => 
         flex flex-col justify-center items-center 
         bg-background-alt z-40
         transition-all duration-1200 ease-in-out
+        animated-gradient
         ${isVisible ? 'opacity-100' : 'opacity-0 -translate-y-full pointer-events-none'}
       `}
     >

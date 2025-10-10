@@ -7,7 +7,7 @@ interface TitulosProps {
 }
 
 const variants = {
-  section: 'font-sans font-bold text-5xl text-primary text-center',
+  section: 'font-sans font-bold text-4xl md:text-5xl text-primary text-center',
   card: 'font-sans font-bold text-2xl text-primary text-center',
   name: 'font-sans font-semibold text-xl text-primary text-center',
   nameCliente: 'font-sans font-bold text-base text-primary text-center',
@@ -18,7 +18,6 @@ const Titulos: React.FC<TitulosProps> = ({ children, variant = 'section', classN
 
   const combinedClasses = `${baseClasses} ${className || ''}`;
 
-  // Usamos <h2> por defecto, que es semánticamente correcto para títulos de sección
   return (
     <h2 className={combinedClasses}>
       {children}
