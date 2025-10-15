@@ -28,12 +28,12 @@ const BeneficiosSeccion: React.FC = () => {
                 {/* Animación para el título */}
                 <Titulos
                     variant="section"
-                    className={`mb-12 ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}
+                    className={`mb-18 ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}
                 >
                     Beneficios de ANA
                 </Titulos>
 
-                <div className="flex flex-wrap justify-center gap-8">
+                <div className="flex flex-wrap justify-center gap-14">
                     {beneficiosData.map((beneficio, index) => (
                         <div
                             key={index}

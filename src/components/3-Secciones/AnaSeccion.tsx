@@ -36,7 +36,7 @@ const SeccionQueEsAna: React.FC = () => {
                         </Parrafos>
 
                         <div className={`w-full flex justify-center ${isVisible ? 'animate-fade-up animate-delay-700' : 'opacity-0'}`}>
-                            <Boton variant="primary">
+                            <Boton variant="primary" href="#equipo">
                                 Agendá <br /> una demo
                             </Boton>
                         </div>

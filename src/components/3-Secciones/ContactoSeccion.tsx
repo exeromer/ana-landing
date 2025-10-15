@@ -5,7 +5,7 @@ import { useInView } from '../../hooks/useInView';
 
 const equipoData = [
     {
-        imagenSrc: "/aleCarnet.jpg",
+        imagenSrc: "/aleCarnet.png",
         nombre: "Alejandra Dib Askar",
         puesto: "Co-Founder",
         linkedinUrl: "https://www.linkedin.com/in/alejandra-dib-ashur/",
@@ -36,12 +36,11 @@ const SeccionEquipo: React.FC = () => {
     const [ref, isVisible] = useInView({ threshold: 0.2, triggerOnce: true });
 
     return (
-        <section ref={ref} className="w-full max-w-7xl mx-auto py-16 px-4">
+        <section id="contacto" ref={ref} className="w-full max-w-screen-xl mx-auto py-16 px-4">
             <Titulos variant="section" className="mb-12">
                 CONTACTO
             </Titulos>
-
-            <div className="flex flex-col md:flex-row justify-around items-start md:items-start gap-8">
+            <div className="flex flex-col items-center md:flex-row justify-between md:items-start gap-8">
                 {equipoData.map((miembro, index) => (
                     <EquipoCard
                         key={miembro.nombre}

@@ -32,7 +32,7 @@ const TestimoniosSeccion: React.FC = () => {
       <Titulos variant="section" className={`mb-12 ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}>
         Clientes
       </Titulos>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-14">
         {testimoniosData.map((testimonio, index) => (
           <div
             key={testimonio.nombre}

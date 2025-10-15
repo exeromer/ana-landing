@@ -4,9 +4,10 @@ interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'outline' | 'large';
   onClick?: () => void;
+  href?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', onClick }) => {
+const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', onClick, href }) => {
   const baseClasses = 'font-bold py-4 px-6 rounded-full uppercase text-xs text-center tracking-wider leading-tight transition-all duration-300 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-lg';
 
   const variantClasses = {
@@ -17,6 +18,13 @@ const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', onClick 
 
   const combinedClasses = `${baseClasses} ${variantClasses[variant]}`;
 
+  if (href) {
+    return (
+      <a href={href} className={combinedClasses}>
+        {children}
+      </a>
+    );
+  }
   return (
     <button className={combinedClasses} onClick={onClick}>
       {children}

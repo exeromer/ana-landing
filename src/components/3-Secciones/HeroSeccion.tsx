@@ -24,7 +24,7 @@ const HeroSeccion: React.FC<HeroSeccionProps> = ({ isVisible,onArrowClick }) => 
     >
       <div className="flex flex-col items-center gap-8 text-center">
         <Logo variant="grande" />
-        <Boton variant="large">
+        <Boton variant="large" href="#equipo">
           <TextoAnimado
             texto="AGENDA UNA DEMO"
             className="font-sans text-xl font-bold text-center"

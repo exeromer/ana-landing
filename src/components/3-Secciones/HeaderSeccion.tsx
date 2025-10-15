@@ -7,7 +7,7 @@ import navIconUrl from '../../assets/nav_icon.svg';
 const navLinks = [
     { name: 'Qué es ANA', href: '#que-es-ana' },
     { name: 'Beneficios', href: '#beneficios' },
-    { name: 'Equipo', href: '#equipo' },
+    { name: 'Contacto', href: '#equipo' },
     { name: 'Filosofía', href: '#filosofia' },
     { name: 'Clientes', href: '#clientes' },
 ];
