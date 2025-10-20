@@ -14,7 +14,7 @@ const FooterSeccion: React.FC = () => {
                 <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                     <img src={selloAnaUrl} alt="Sello de ANA" className="w-40 h-40" loading="lazy" />
                     <Parrafos variant="footer">
-                        Santiago del Estero, Mendoza, Argentina <br />
+                        Santiago del Estero, Argentina <br />
                         Manizales, Colombia <br />
                         Teléfono: (021) 456-7890 <br />
                         Mobile: (0123) 456-7890

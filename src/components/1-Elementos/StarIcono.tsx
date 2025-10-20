@@ -1,5 +1,4 @@
 import React from 'react';
-
 import fullStarUrl from '../../assets/star-svgrepo-com.svg';
 import halfStarUrl from '../../assets/star-sharp-half-svgrepo-com.svg';
 

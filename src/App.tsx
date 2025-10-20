@@ -52,11 +52,11 @@ function App() {
           <FilosofiaSeccion />
         </section>
         <section id="clientes">
-          <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
+          <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background-beneficios)" />
           <TestimoniosSeccion />
         </section>
         <section id="equipo">
-          <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
+          <DivisorSeccion colorDesde="var(--color-background-beneficios)" colorHasta="var(--color-background)" />
           <SeccionEquipo />
         </section>
       </main>
@@ -65,70 +65,5 @@ function App() {
     </>
   );
 }
-
-/*
-  const handleEntrarAlSitio = () => {
-    setPingActivado(true);
-    setSaliendo(true);
-    setTimeout(() => {
-      setVistaHero(false);
-    }, 700);
-  }
- 
-  // --- VISTA HERO ---
-  if (vistaHero) {
-    return (
-      <main className={`
-      bg-background-alt min-h-screen flex flex-col justify-center items-center relative 
-      transition-opacity duration-700 ease-in-out
-      animated-gradient
-      ${saliendo ? 'opacity-0' : 'opacity-100'}
-    `}>
-        <div className="flex flex-col items-center gap-8" onClick={handleEntrarAlSitio}>
-          <Logo variant="grande" />
- 
-          <Boton variant="primary" >
-            <TextoAnimado
-              texto="AGENDA UNA DEMO"
-              className="font-sans text-xl font-bold text-center"
-            />
-          </Boton>
-        </div>
-        <div className="absolute bottom-10 animate-bounce h-40 w-40 flex flex-col items-center justify-center gap-2 cursor-pointer">
-          <FlechaIcono onClick={handleEntrarAlSitio} className={pingActivado ? 'animate-ping animate-once animate-duration-1000 animate-ease-in' : 'animate-bounce'} />
-        </div>
-      </main>
-    );
-  }
-*/
-/*
-// --- VISTA SITIO ---
-return (
-  <>
-    <HeaderSeccion />
-    <main className="animate-fade-in animate-duration-1000">
-      <section id="que-es-ana"><SeccionQueEsAna /></section>
-      <section id="beneficios">
-        <DivisorSeccion colorDesde="var(--color-background-ana)" colorHasta="var(--color-background-beneficios)" />
-        <BeneficiosSeccion />
-      </section>
-      <section id="equipo">
-        <DivisorSeccion colorDesde="var(--color-background-beneficios)" colorHasta="var(--color-background)" />
-        <SeccionEquipo />
-      </section>
-      <section id="filosofia">
-        <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
-        <FilosofiaSeccion />
-      </section>
-      <section id="clientes">
-        <DivisorSeccion colorDesde="var(--color-background)" colorHasta="var(--color-background)" />
-        <TestimoniosSeccion />
-      </section>
-    </main>
-    <FooterSeccion />
-  </>
-);
-}
-*/
 
 export default App;

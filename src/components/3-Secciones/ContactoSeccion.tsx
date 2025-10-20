@@ -21,7 +21,7 @@ const equipoData = [
 
     },
     {
-        imagenSrc: "/veronicaCarnet.jpg",
+        imagenSrc: "/veronicaCarnet.png",
         nombre: "Verónica Cesari Carson",
         puesto: "Co-Founder",
         linkedinUrl: "https://www.linkedin.com/in/veronica-cesari-carson/",

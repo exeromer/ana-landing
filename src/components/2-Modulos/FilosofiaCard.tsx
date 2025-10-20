@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Titulos from "../1-Elementos/Titulos";
-//import Parrafos from "../1-Elementos/Parrafos";
 import selloForbitUrl from "../../assets/ANA_sello_forbit.svg";
 import Card from "../1-Elementos/Card";
 import { useInView } from "../../hooks/useInView";
@@ -47,7 +46,8 @@ const FilosofiaCard: React.FC<FilosofiaCardProps> = ({ palabra, frase }) => {
                   texto={frase}
                   className="font-sans text-base text-primary text-center"
                 />
-              )}            </Card>
+              )}
+            </Card>
           </div>
 
         </div>

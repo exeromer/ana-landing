@@ -27,7 +27,7 @@ const TestimoniosSeccion: React.FC = () => {
   return (
     <section
       ref={ref}
-      className={`w-full max-w-6xl mx-auto py-16 px-4 transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={`bg-background-beneficios w-full mx-auto py-16 px-4 transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <Titulos variant="section" className={`mb-12 ${isVisible ? 'animate-fade-down' : 'opacity-0'}`}>
         Clientes
