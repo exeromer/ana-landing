@@ -16,8 +16,8 @@ const FooterSeccion: React.FC = () => {
                     <Parrafos variant="footer">
                         Santiago del Estero, Argentina <br />
                         Manizales, Colombia <br />
-                        Teléfono: (021) 456-7890 <br />
-                        Mobile: (0123) 456-7890
+                        Teléfono: +54 9 385 4110210 <br />
+                        Mail: ana.analiticapna@gmail.com
                     </Parrafos>
                 </div>
                 {/* --- Columna Derecha: Redes Sociales --- */}

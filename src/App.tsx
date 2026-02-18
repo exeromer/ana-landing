@@ -11,8 +11,7 @@ import SeccionQueEsAna from './components/3-Secciones/AnaSeccion';
 import HeroSeccion from './components/3-Secciones/HeroSeccion';
 
 
-function App() {
- 
+function App() { 
  const [hasScrolledPastHero, setHasScrolledPastHero] = useState(false);
 
   useEffect(() => {

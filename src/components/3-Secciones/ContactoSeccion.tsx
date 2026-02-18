@@ -9,7 +9,7 @@ const equipoData = [
         nombre: "Alejandra Dib Askar",
         puesto: "Co-Founder",
         linkedinUrl: "https://www.linkedin.com/in/alejandra-dib-ashur/",
-        telefono: { display: "+54 9 261 123-4567", link: "https://wa.me/5492616686349" }
+        telefono: { display: "+54 9 385 411-0210", link: "https://wa.me/5492616686349" }
 
     },
     {
@@ -17,7 +17,7 @@ const equipoData = [
         nombre: "Andrés Felipe Galindo",
         puesto: "Co-Founder",
         linkedinUrl: "https://www.linkedin.com/in/andr%C3%A9s-felipe-galindo-gonz%C3%A1lez-b71642a/",
-        telefono: { display: "+57 310 123-4567", link: "https://wa.me/573101234567" }
+        telefono: { display: "+57 317 6710099", link: "https://wa.me/573101234567" }
 
     },
     {
@@ -26,7 +26,7 @@ const equipoData = [
         puesto: "Co-Founder",
         linkedinUrl: "https://www.linkedin.com/in/veronica-cesari-carson/",
         email: {
-            display: "ana@gmail.com", link: "https://mail.google.com/mail/?view=cm&fs=1&to=ana@gmail.com&su=Consulta%20sobre%20ANA"
+            display: "ana.analiticapna@gmail.com", link: "https://mail.google.com/mail/?view=cm&fs=1&to=ana@gmail.com&su=Consulta%20sobre%20ANA"
         }
 
     },
