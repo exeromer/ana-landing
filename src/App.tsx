@@ -36,8 +36,6 @@ function App() {
     <>
       <HeaderSeccion isVisible={hasScrolledPastHero} />
       <HeroSeccion isVisible={!hasScrolledPastHero} onArrowClick={handleArrowClick} />
-
-      {/* El contenido principal queda presente debajo del Hero. */}
       <main>
         <section id="que-es-ana">
         <SeccionQueEsAna />

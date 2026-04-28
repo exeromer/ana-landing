@@ -15,9 +15,11 @@ const FooterSeccion: React.FC = () => {
                     <img src={selloAnaUrl} alt="Sello de ANA" className="w-40 h-40" loading="lazy" />
                     <Parrafos variant="footer">
                         Santiago del Estero, Argentina <br />
+                        Mendoza, Argentina <br />
                         Manizales, Colombia <br />
-                        Teléfono: +54 9 385 4110210 <br />
-                        Mail: ana.analiticapna@gmail.com
+                        Contacto Colombia +57 317 6710099 <br />
+                        Contacto Argentina: +54 9 3854 11-0210 <br />
+                        Mail:  ana.analiticapna@gmail.com <br />
                     </Parrafos>
                 </div>
                 {/* --- Columna Derecha: Redes Sociales --- */}
